@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Stalinist+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+*{
+    margin:0;
+    padding:0; 
+    box-sizing: border-box;  
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    position:relative;
+    top:0;
+    width: 100%;
+    height: 70px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.596);
+}
+.home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url(../Images/Background.jpg); 
+    background-size: cover;
+    background-position: center;
+}
+.logo{
+    color:rgb(251, 255, 0);
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: 'Stalinist One', cursive;
+}
+.nav{
+    float:right;
+    line-height: 100px;
+}
+.nav a{
+    color: yellow;
+    text-decoration: none;
+    font-weight:500;
+    letter-spacing: 1px;
+    padding:2px 15px;
+    border-radius:20px;
+    transition:0.3s;
+    transition-property:background;
+}
+.nav a:not(:last-child){
+    margin-right: 40px;
+}
+.nav a:hover{
+background:yellow;
+color:black
+}
+.title_conten{
+    max-width: 250px;
+    margin: 100px 200px;
+    
+}
+.information h2{
+    color:white;
+    font-size: 80px;
+    text-transform:initial;
+    font-weight: 800;
+    letter-spacing:2px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    padding-top: 20%;
+    padding-left: 3%;
+}
+.information p{
+    color:rgba(255, 255, 255, 0.726);
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: inherit;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding-left: 3%;
+}
+.info{
+    color: black;
+    background: yellow;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 10px 40px;
+    border-radius:20px;
+    margin-left: 15%;
+    transition:3s;
+    transition-property: transform;
+
+}
+.info:hover{
+    background: white;
+}
+footer{
+    background-color: rgb(19, 19, 19);
+    position: relative;
+    padding-top: 2%;
+    padding-left:50%;
+    width: 100%;
+    height: 100px;
+}
+.follow a{
+   color:white;
+}
+.media img{
+    width: 30px;
+    height: 30px;
+    padding:0 1px;
+}
+label{
+    display: none;
+}
+#check1{
+    z-index: 3;
+    display: none;
+}
+@media(max-width: 960px){
+    header .nav{
+        display: none;
+    }
+    label{
+        display: block;
+        color:yellow;
+        font-size: 25px;
+        cursor:pointer;
+        transition: 0.3s;
+        transition-property: color;
+}
+    label:hover{
+    color:bl;
+    }
+    label #close{
+        display: none;
+
+    }
+    #check1:checked ~ header .nav{
+        z-index: 3;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.801);
+        top:0;
+        bottom: 0;
+        left:0;
+        right:0;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #check1:checked ~ header .nav a{
+        font-weight:700;
+        margin-right: 0;
+        margin-bottom:50px;
+        letter-spacing: 3px;
+    }
+    #check1:checked ~ header label #menu{
+        display:none;
+    }
+    #check1:checked ~ header label #close{
+        z-index: 3;
+        display: inline-block;
+        position: fixed;
+    }
+    label #menu{
+        position:absolute;
+    }
+    header .logo{
+        position:absolute;
+    }
+     .info h2{
+        font-size:45px;
+        line-height: 50px;
+    }
+    .info p span{
+        font-size: 40px;
+        font-weight: 600;
+    }
+     .info p{
+        font-size: 14px;
+    }
+}
+ @media(max-width:400px){
+   .info h2{
+        font-size:25px;
+        line-height: 10px;
+    }
+     .info h2 span{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .info p{
+        font-size: 14px;
+ }
+}
